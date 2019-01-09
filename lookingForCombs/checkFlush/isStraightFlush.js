@@ -7,9 +7,9 @@ const findStraightFlush = (cardsArray) => {
   if (isFlush(cardsArray)) {
     const flushArray = cardsArray.filter(card => card.suit === prepCardsArray[0].suit);
     flushArray.sort((prev, next) => next.value - prev.value);
-    if (flushArray[0].value - flushArray[4].value === 4) return false;
+    if (flushArray[0].value - flushArray[4].value === 4) return true;
   }
-  return true;
+  return false;
 };
 
 module.exports = findStraightFlush;

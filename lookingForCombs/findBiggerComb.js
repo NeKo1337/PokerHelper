@@ -26,10 +26,10 @@ const findBiggerComb = (cardsPool) => {
     findRoyalStraight(cardsArray),
   ];
 
-  const biggerComb = allCombinations.findIndex(true);
+  let biggerComb = allCombinations.findIndex(el => el === true);
+  if (biggerComb === -1) biggerComb = 0;
 
-
-  return findCombination(biggerComb + 1);
+  return findCombination(biggerComb);
 };
 
 module.exports = findBiggerComb;
